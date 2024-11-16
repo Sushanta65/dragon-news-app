@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 
 const Categories = () => {
     const [categories, setCategories] = useState([])
@@ -18,7 +18,7 @@ const Categories = () => {
             <div className="flex flex-col w-full gap-2">
                 {
                     categories.map(category => 
-                        <Link key={category.category_id} className="btn btn-sm justify-start text-[#7c7b7b]" to={`/category/${category.category_id}`}>{category.category_name}</Link>
+                        <NavLink key={category.category_id} className="btn btn-sm justify-start text-[#7c7b7b]" to={`/category/${category.category_id}`}>{category.category_name}</NavLink>
                     )
                 }
             </div>
